@@ -1,8 +1,8 @@
 /*
- * @Author: your name
+ * @Author: Clarissa
  * @Date: 2020-05-19 09:49:28
- * @LastEditTime: 2020-08-10 22:07:15
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-10-10 13:48:23
+ * @LastEditors: Clarissa
  * @Description: In User Settings Edit
  * @FilePath: \VXiangProjectBackGroundSystemWeb\vue.config.js
  */
