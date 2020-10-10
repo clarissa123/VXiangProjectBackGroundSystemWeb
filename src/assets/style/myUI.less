@@ -1,0 +1,349 @@
+@import "./mixin.less";
+
+.task-list {
+  .wh(100%, 100%);
+  background: @white;
+
+
+  .top {
+    padding: 14px 0;
+    box-sizing: border-box;
+    background: #fff;
+
+    .fj();
+
+    .top-left {
+      margin-left: 20px;
+
+      .select {
+        .wh(104px, 32px);
+        .borderRadius(4px);
+        background: @white;
+        margin-right: 10px;
+        vertical-align: middle;
+
+        // 改变el-input的placeholder的字体颜色
+        /deep/input::-webkit-input-placeholder {
+          color: @font-color;
+          font-size: 14px;
+        }
+
+        /deep/input::-moz-input-placeholder {
+          color: @font-color;
+          font-size: 14px;
+        }
+
+        /deep/input::-ms-input-placeholder {
+          color: @font-color;
+          font-size: 14px;
+        }
+
+        /deep/.el-input--suffix .el-input__inner {
+          height: 32px;
+        }
+
+        /deep/ .el-input__suffix {
+          top: 5px;
+        }
+
+        /deep/ .el-select__caret:before {
+          color: @font-color;
+        }
+
+      }
+
+      .date {
+        .wh(370px, 32px);
+        background: @white;
+        .borderRadius(4px);
+        border: 1px solid rgba(217, 217, 217, 1);
+        padding: 0 0 0 12px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .search-btn {
+        background: rgba(145, 163, 182, 1);
+        .wh(65px, 32px);
+        .borderRadius(4px);
+        line-height: 32px;
+        padding: 0;
+        color: @white;
+        vertical-align: middle;
+      }
+
+      /deep/.el-breadcrumb__inner {
+        img {
+          display: inline-block;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .top-right {
+      margin-right: 20px;
+
+      .btn {
+        .borderRadius(4px);
+        letter-spacing: 1px;
+        padding: 0;
+
+        /deep/&:focus,
+        &:hover,
+        &:active {
+          background-color: transparent;
+          color: @blue;
+          border: 1px solid @blue;
+        }
+      }
+
+      .left-btn {
+        .wh(88px, 32px);
+        background: @blue;
+        color: @white;
+        margin-right: 10px;
+      }
+
+      .right-btn {
+        .wh(65px, 32px);
+        background: @white;
+        color: @font-color;
+        border: 1px solid rgba(217, 217, 217, 1);
+        margin-left: 0;
+      }
+    }
+  }
+
+  .bottom {
+    .wh(100%, calc(100% - 59px));
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* chrome & safari 浏览器 */
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 5px;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面的滑块*/
+      background: #eee;
+    }
+
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道背景*/
+      background: transparent;
+    }
+
+    .bottom-container {
+      margin-top: 30px;
+      margin-left: 90px;
+    }
+
+    .table-container {
+      .wh(100%, 100%);
+    }
+
+    .table {
+
+      .look-btn,
+      .update-btn,
+      .more-btn,
+      .delete-btn {
+        color: @blue;
+      }
+
+      .dot {
+        margin: 0 10px 0 20px;
+        .wh(1px, 14px);
+        color: rgba(0, 0, 0, 0.09);
+      }
+
+      .green-dot {
+        display: inline-block;
+        .wh(6px, 6px);
+        .borderRadius(50%);
+        background: #52c41a;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .red-dot {
+        display: inline-block;
+        .wh(6px, 6px);
+        .borderRadius(50%);
+        background: #ed335a;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .gray-dot {
+        display: inline-block;
+        .wh(6px, 6px);
+        .borderRadius(50%);
+        background: rgba(0, 0, 0, 0.25);
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      /deep/.el-link.el-link--primary {
+        color: @blue;
+      }
+    }
+  }
+
+  .ok-btn {
+    background: @blue;
+    color: @white;
+    .wh(65px, 32px);
+    .borderRadius(4px);
+  }
+
+  .no-btn {
+    .wh(65px, 32px);
+    background: @white;
+    color: @font-color;
+    border: 1px solid rgba(217, 217, 217, 1);
+    margin-left: 10px;
+  }
+
+  .hot-info-btn {
+    .wh(106px, 32px);
+    background: @blue;
+    .borderRadius(4px);
+    color: @white;
+  }
+
+
+}
+
+/deep/.el-button {
+  padding: 0;
+}
+
+/deep/.el-dropdown-menu__item {
+  text-align: center;
+}
+
+/deep/.el-popper[x-placement^="bottom"] {
+  margin-top: 0;
+}
+
+/deep/.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: rgba(211, 220, 230, 1);
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/deep/.el-popper .popper__arrow {
+  display: none;
+}
+
+/deep/.el-popper[x-placement^="bottom"] {
+  margin-top: 0;
+}
+
+
+/deep/.el-breadcrumb .el-breadcrumb__inner.is-link {
+  font-weight: normal;
+  color: @font-color;
+}
+
+/deep/.el-breadcrumb .el-breadcrumb__inner.is-link:hover {
+  font-weight: normal;
+  color: @blue;
+}
+
+.slot-content-w {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+
+  .slot-middle {
+    width: 100%;
+    height: fit-content;
+    padding: 34px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .item {
+      min-height: 22px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 19px;
+
+      .title2 {
+        width: 100%;
+        text-align: center;
+      }
+
+      .title {
+        width: 70px;
+        text-align: start;
+        margin-right: 6px;
+      }
+
+      .content {
+        min-height: 22px;
+        width: 150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .selectItem {
+          width: 100px;
+          height: 22px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .slot-btns {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+
+    .btn {
+      width: 65px;
+      height: 32px;
+      border-radius: 4px;
+      line-height: 32px;
+    }
+
+    .cancel {
+      color: #000000;
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(217, 217, 217, 1);
+      margin-left: 8px;
+    }
+
+    .ok {
+      background: #1890ff;
+      box-sizing: 1px solid #1890ff;
+      color: #ffffff;
+    }
+  }
+}

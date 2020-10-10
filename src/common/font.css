@@ -1,0 +1,18 @@
+@font-face {
+    /*重命名字体名*/
+    font-family: 'PingFangSC-Regular';
+    /*引入字体*/
+    src: url('./ionicons.143146fa.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /*重命名字体名*/
+    font-family: 'PingFang Medium';
+    /*引入字体*/
+    src: url('./PingFang Medium.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
